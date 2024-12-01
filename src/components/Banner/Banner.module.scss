@@ -1,0 +1,42 @@
+@import '@/styles/Main.scss';
+
+.banner {
+  align-items: center;
+  display: flex;
+  height: calc(85vh);
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%;
+  padding: 0 20px;
+  width: 100%;
+
+  @media (max-width: $screen-sm) {
+    max-width: 100%;
+  }
+}
+
+.content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.title {
+  @include title (
+    $min-size: 55px,
+    $max-size: 66px
+  );
+  $color: $white;
+  margin-bottom: 20px;
+}
+
+.text {
+  @include text (
+    $color: $white
+  );
+}

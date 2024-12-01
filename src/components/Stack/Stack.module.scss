@@ -1,0 +1,264 @@
+@import '@/styles/Main.scss';
+
+@keyframes move1 {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  50% {
+    transform: translateX(180px);
+  }
+
+  100% {
+    transform: translateX(180px);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  50% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(180px);
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: translateX(180px);
+  }
+
+  50% {
+    transform: translateX(180px);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes move4 {
+  0% {
+    transform: translateX(180px);
+  }
+
+  50% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+.stack {
+  align-items: center;
+  display: flex;
+  height: auto;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 955px;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  @include title;
+  $color: $white;
+  font-weight: 700;
+  margin-bottom: 30px;
+  max-width: 700px;
+  text-align: center;
+
+  span {
+    color: $main-color;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.button2 {
+  @include main-btn2;
+}
+
+.button {
+  @include main-btn;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    max-width: 330px;
+  }
+}
+
+.image1,
+.image2 {
+  position: relative;
+  width: 20%;
+  z-index: 1;
+
+  @media (max-width: $screen-md) {
+    width: 57%;
+  }
+}
+
+.separator1,
+.separator2 {
+  border-bottom: 1px solid $main-color;
+  border-top: 1px solid $main-color;
+  box-shadow: 0 0 7px rgba($main-color, .5);
+  height: 40px;
+  margin: auto -10px;
+  position: relative;
+  width: 17.5%;
+  z-index: -1;
+
+  @media (max-width: $screen-md) {
+    transform: rotate(90deg);
+    width: 170px;
+  }
+
+  span {
+    background: $gradient;
+    border-radius: 50%;
+    box-shadow: 0 0 21px $shadow-color;
+    height: 13px;
+    left: 15px;
+    position: absolute;
+    width: 13px;
+
+    &:first-child {
+      top: -6px;
+    }
+
+    &:nth-child(2) {
+      bottom: -6px;
+    }
+  }
+}
+
+.separator1 {
+  span {
+    &:first-child {
+      animation: move1 3s infinite;
+    }
+
+    &:nth-child(2) {
+      animation: move3 3s infinite;
+    }
+  }
+}
+
+.separator2 {
+  span {
+    &:first-child {
+      animation: move2 3s infinite;
+    }
+
+    &:nth-child(2) {
+      animation: move4 3s infinite;
+    }
+  }
+}
+
+.info {
+  align-items: center;
+  background-color: #0a1325;
+  border: 1px solid rgba($main-color, .3);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  position: relative;
+  width: 28%;
+
+  @media (max-width: $screen-md) {
+    margin-top: 35px;
+    width: 100%;
+  }
+
+  &_bg {
+    border-radius: 9px;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+
+    &::before {
+      background: radial-gradient(circle, rgba(48,118,138,0.5144432773109244) 0%, rgba(10,19,37,1) 80%);;
+      bottom: 0;
+      content: '';
+      height: 125%;
+      left: 0;
+      position: absolute;
+      transform: rotate(90deg) translateX(75%);
+      width: 100%;
+    }
+  }
+
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &_item {
+    background-color: $bg;
+    border: 1px solid rgba($main-color, .3);
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  &_text {
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.logo {
+  background-color: $bg;
+  border: 1px solid rgba($main-color, .3);
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  margin: -60px auto 8px;
+  padding: 16px;
+  width: auto;
+}
