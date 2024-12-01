@@ -16,6 +16,8 @@ const Tabs = () => {
   };
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
     };
