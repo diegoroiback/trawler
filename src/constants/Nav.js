@@ -19,47 +19,47 @@ export const NavHeader = [
 
 export const NavFooter = [
   {
-    title: 'Solutions',
+    title: "Solutions",
     list: [
-      'Account Aggregation',
-      'Balance Checks',
-      'Customer Analytics',
-      'Data Access',
-      'Data Enhancement',
-      'Financial Insights',
-      'Instant Account Verifications',
+      "Account Aggregation",
+      "Balance Checks",
+      "Customer Analytics",
+      "Data Access",
+      "Data Enhancement",
+      "Financial Insights",
+      "Instant Account Verifications",
     ]
   },
   {
-    title: 'Guides',
+    title: "Guides",
     list: [
-      'Get started',
-      'Core concepts',
-      'Trawler connector',
-      'Authentication',
-      'Webhooks',
-      'Custom metadata',
-      'Remote data',
+      "Get started",
+      "Core concepts",
+      "Trawler connector",
+      "Authentication",
+      "Webhooks",
+      "Custom metadata",
+      "Remote data",
     ]
   },
   {
-    title: 'Company',
+    title: "Company",
     list: [
-      'About',
-      'Contacts',
-      'Press',
-      'Dashboard',
-      'System status',
-      'Product updates',
+      "About",
+      "Contacts",
+      "Press",
+      "Dashboard",
+      "System status",
+      "Product updates",
     ]
   },
   {
-    title: 'Legal',
+    title: "Legal",
     list: [
-      'Privacy policy',
-      'Cookie policy',
-      'Terms of services',
-      'Terms and conditions',
+      "Privacy policy",
+      "Cookie policy",
+      "Terms of services",
+      "Terms and conditions",
     ]
   }
 ];
