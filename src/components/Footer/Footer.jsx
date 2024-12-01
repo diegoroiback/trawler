@@ -27,7 +27,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className={styles.text}>Ready for the next-gen?</p>
-          <Link href='' className={styles.btn}>Book a demo</Link>
+          <Link href='/' className={styles.btn}>Book a demo</Link>
         </div>
         <div className={styles.services}>
           {NavFooter.map((item, index) => (

@@ -21,7 +21,7 @@ const Faqs = () => {
       <div className={styles.container}>
         <div className={styles.info}>
           <h3 className={styles.info_title}>Frequently Asked questions</h3>
-          <Link href={'/'} className={styles.btn}>Book a demo</Link>
+          <Link href={'/contact'} className={styles.btn}>Book a demo</Link>
         </div>
         <div className={styles.faqs}>
           {FaqsList.map((item, index) => (
